@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const db = {};
 
 db.mongoose = mongoose;
-db.url = "mongodb+srv://Jazmin:pass@cluster0.ogaif.mongodb.net/mydb";
+db.url = 
 db.mongoose
   .connect(db.url, {
     useNewUrlParser: true,
