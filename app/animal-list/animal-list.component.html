@@ -1,0 +1,18 @@
+<div class="container">
+  <div
+    *ngFor="let animal of animals; let i = index"
+    class="card"
+    (click)="onAnimalClick(animal)"
+    [ngClass]="{
+      mammal: animal.className == 'mammal',
+      bird: animal.className == 'bird',
+      reptile: animal.className == 'reptile',
+      invertebrate: animal.className == 'invertebrate',
+      amphibian: animal.className == 'amphibian',
+      fish: animal.className == 'fish'
+    }"
+  >
+    <h3>{{ animal.name | uppercase }}</h3>
+   
+  </div>
+</div>

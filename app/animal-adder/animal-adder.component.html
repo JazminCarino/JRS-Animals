@@ -1,0 +1,61 @@
+
+<div class='container'>
+<form>
+  <label for="name">Name: </label>
+  <input type="text" id="name" required [(ngModel)]="animal.name" name="name" />
+  <br /><br />
+
+  <label for="latinName">Latin Name: </label>
+  <input
+    type="text"
+    name="latinName"
+    required
+    [(ngModel)]="animal.latinName"
+    id="latinName"
+  />
+  <br /><br />
+
+  <label for="numLegs"># of Legs: </label>
+  <input
+    type="text"
+    id="numLegs"
+    required
+    [(ngModel)]="animal.numLegs"
+    name="numLegs"
+  />
+  <br /><br />
+
+  <span>
+
+    <select id='diet' name="diet" required [(ngModel)]="animal.diet" id="diet">
+      <label for="diet">Diet: </label>
+      <option disabled value="">Select A Diet</option>
+      <option *ngFor="let diet of diets">{{ diet }}</option>
+    </select>
+
+
+    <select
+      name="text"
+      id="className"
+      required
+      [(ngModel)]="animal.className"
+      name="className"
+    >
+      <label for="className">Class: </label>
+      <option disabled value="">Select A Class</option>
+      <option *ngFor="let class of classes">{{ class }}</option>
+    </select>
+  </span>
+  <br /><br />
+
+  <label for="habitat">Habitat: </label>
+  <input
+    type="text"
+    id="habitat"
+    required
+    [(ngModel)]="animal.habitat"
+    name="habitat"
+  /><br /><br />
+
+  <input (click)="submitAnimal()" type="submit" value="Submit" /><br /><br />
+</form>

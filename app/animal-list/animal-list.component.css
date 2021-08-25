@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  flex-direction: row;
+  margin: 1em;
+  background-color: rgba(146, 224, 255, 0.425);
+  border-top: teal solid 3px;
+  border-bottom: teal solid 3px;
+  font-family: "Big Shoulders Display", cursive;
+}
+
+.card {
+  border-radius: 5px;
+  margin: 0.5em;
+  padding: 0.5em;
+  width: 250px;
+  flex: 0 0 auto;
+  border: black solid 1px;
+}
+
+.card:hover {
+  background-color: rgb(247, 247, 247);
+  cursor: zoom-in;
+  /* border: solid darkgrey 3px; */
+}
+
+h3 {
+  background-color: rgb(255, 251, 241);
+  text-align: center;
+  width: 225px;
+  margin: 0;
+  padding: 0.5em;
+  border-radius: 2.5px;
+  font-size: 16pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: double;
+}
+
+.mammal {
+  background-color: rgb(129, 127, 127);
+}
+
+.bird {
+  background-color: rgb(155, 21, 21);
+}
+
+.reptile {
+  background-color: rgb(220, 255, 64);
+}
+
+.invertebrate {
+  background-color: rgb(86, 20, 139);
+}
+
+.amphibian {
+  background-color: rgb(11, 117, 34);
+}
+
+.fish {
+  background-color: rgb(20, 49, 85);
+}

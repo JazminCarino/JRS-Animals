@@ -1,0 +1,34 @@
+.container {
+  border: solid teal 3px;
+
+  background-color: rgba(146, 224, 255, 0.425);
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: calc(300px - 2em);
+  padding: 1em 0;
+  margin: 1em;
+}
+
+form {
+  border: black solid 1px;
+  border-radius: 5px;
+
+  background-color: rgb(255, 251, 241);
+
+  padding: 0.5em;
+}
+
+input[type="text"] {
+  font: 15px/24px;
+  font-family: "Big Shoulders Display", cursive;
+  color: #121212;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+#diet {
+  margin-right: 1em;
+}

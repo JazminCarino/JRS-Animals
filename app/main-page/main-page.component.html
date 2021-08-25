@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="header">
+        <H1>{{title}}      
+        <a *ngIf='!user' routerLink="/login"><button> Log In </button></a>
+        <p style= "font-size: 14pt; margin:.25em;" *ngIf="user">{{user.username}}</p>
+        </H1>
+   </div>
+
+  
+    
+  <!-- <login (newLogin)="setUser($event)"></login> -->
+  
+    
+  
+    <div class="selected-animal">
+      <animal-card [animal]="selectedAnimal"></animal-card>
+    </div>
+  
+  
+    <div class="animal-list">
+      <animal-list (selectAnimal)="onAnimalSelected($event)"></animal-list>
+      </div>
+  </div>
+  
+  <div class="animal-adder">
+    <animal-adder class="animalAdder"></animal-adder>
+  </div>
+  
+  
+  

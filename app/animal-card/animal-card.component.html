@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="selectAnimal" *ngIf="!animal">
+    <h2>Who's who at the Zoo?</h2>
+    <p>Choose an animal to discover more information</p>
+  </div>
+
+  <div
+    *ngIf="animal"
+    class="card"
+    (click)="onAnimalClick(animal)"
+    [ngClass]="{
+      mammal: animal.className == 'mammal',
+      bird: animal.className == 'bird',
+      reptile: animal.className == 'reptile',
+      invertebrate: animal.className == 'invertebrate',
+      amphibian: animal.className == 'amphibian',
+      fish: animal.className == 'fish'
+    }"
+  >
+    <h3>{{ animal.name | uppercase }}</h3>
+    <div class="animal-info">
+      <p id="latin">{{ animal.latinName }}</p>
+      <p>
+        The {{ animal.name }} is part of the class {{ animal.className }}, has
+        {{ animal.numLegs }} legs, and are {{ animal.diet }}s. They typically
+        can be found in the listed habitat(s): {{ animal.habitat }}.
+      </p>
+
+    <br>
+      <p style="font-size: 14pt;">
+        If you find this information to be incorrect, you may use the edit
+        button to update it, or the delete button to remove the animal from the database.
+      </p>
+
+      <div class="buttons">
+        <button (click)="deleteAnimal(animal)">Delete</button>
+        <button class="update" (click)="updateAnimal(animal)">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>
